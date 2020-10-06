@@ -9,6 +9,7 @@ import { ContadorComponent } from './contador/contador.component';
 import { CardPerfilComponent } from './card-perfil/card-perfil.component';
 import { DiretivasComponent } from './diretivas/diretivas.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
+import { FormReativoComponent } from './form-reativo/form-reativo.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TemplateFormComponent } from './template-form/template-form.component';
     ContadorComponent,
     CardPerfilComponent,
     DiretivasComponent,
-    TemplateFormComponent
+    TemplateFormComponent,
+    FormReativoComponent
   
   ],
   imports: [
