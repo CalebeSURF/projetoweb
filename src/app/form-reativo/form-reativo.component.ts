@@ -12,16 +12,20 @@ export class FormReativoComponent implements OnInit {
 
   constructor() { 
     this.formCadastro = new FormGroup({
-        'nome': new FormControl(null, Validators.required),
+        'nome': new FormControl(null, Validators.compose([
+                                                            Validators.required,
+                                                            Validators.minLength(5),
+                                                            Validators.maxLength(50)
+                                                         ])),
         'email': new FormControl(null, Validators.required),
         'telefone' : new FormControl(null, Validators.required)
     });
   }
-
+g
   ngOnInit(): void {
   }
 
-  onSubmit(){
+  enviar(){
     let dados = `
     Nome: ${this.formCadastro.value.nome}
     email: ${this.formCadastro.value.email}
